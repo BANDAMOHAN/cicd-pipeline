@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix,precision_score, f1_score, recall_score
 sns.set(style='white')
 
-dataset=pd.read_csv(r"D:\Data Science with AI\Data Science With AI\29th--September- CICD Pipeline\29th- CICD Pipeline\cicd workflows\iris.csv")
+dataset=pd.read_csv("iris.csv")
 
 dataset.columns=[colname.strip(' (cm)').replace(" ","_") for colname in dataset.columns.tolist()]
 features_names=dataset.columns.tolist()[:4]
@@ -132,4 +132,5 @@ with open('scores.txt', "w") as score:
 
             
             
+
         
